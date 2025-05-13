@@ -41,11 +41,9 @@ class View
     public function render(string $view = '', array $data = []): string
     {
         $path = $this->getPathToView($view);
-
         if (file_exists($this->getPathToMain()) && file_exists($path)) {
 
             extract($data, EXTR_PREFIX_SAME, '');
-
             ob_start();
             require $path;
             $content = ob_get_clean();
@@ -59,5 +57,4 @@ class View
     {
         return $this->render($this->view, $this->data);
     }
-
 }

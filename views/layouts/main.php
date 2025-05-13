@@ -8,10 +8,8 @@
     <title>Main site</title>
 </head>
 <body>
-
-<div>
-    <?= $content ?? ''; ?>
-</div>
-
+    <div>
+        <?= $content ?? ''; ?>
+    </div>
 </body>
 </html>
