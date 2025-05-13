@@ -1,8 +1,14 @@
 {
     "name": "weathered-cr/practice_php",
-    "description": "sigma",
+    "description": "desk",
     "type": "project",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "weathered-cr",
+            "email": "mrfocs2000@gmail.com"
+        }
+    ],
     "minimum-stability": "dev",
     "require": {
         "php": "^7.4 | ^8.0"
