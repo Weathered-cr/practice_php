@@ -20,19 +20,18 @@ class Site
     {
         return new View('site.hello', ['message' => 'hello working']);
     }
-    public function go(): string
-    {
-        return new View('site.go', ['message' => 'go working']);
-    }
+
     public function signup(Request $request): string
     {
         if ($request->method === 'POST' && User::create($request->all())) {
-            app()->route->redirect('/go');
+            app()->route->redirect('/hello');
         }
         return new View('site.signup');
     }
-    public function login(Request $request): string{
-        if($request->method === 'GET'){
+
+    public function login(Request $request): string
+    {
+        if ($request->method === 'GET') {
             return new View('site.login');
         }
         if (Auth::attempt($request->all())) {

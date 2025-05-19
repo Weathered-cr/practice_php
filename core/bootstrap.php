@@ -23,4 +23,6 @@ function app() {
     return $app;
 }
 
+return $app;
+
 return new Src\Application(new Src\Settings(getConfigs()));
